@@ -2,7 +2,7 @@ require_relative '../lib/03_Shakespeare'
 
 local_dir = File.expand_path('../', __FILE__)
 $LOAD_PATH.unshift(local_dir)
-f = File.open('../shakespeare.txt', "r")
+f = File.open('shakespeare.txt', "r")
 s = f.read
 f.close
 
@@ -22,7 +22,6 @@ it "ex3" do
 end
 
 it "ex4" do
-  expect(word_counter(s, d2)).to eq({})
+  expect(word_counter(s, d2)).to eq({:a => 271278, :and => 32647, :are => 6583, :be => 20743, :by => 4987, :for => 13993, :i => 238146, :in => 53054, :is => 36663, :it => 29509, :not => 10951, :of => 20609, :on => 33114, :or => 40420, :that => 11553, :the => 51859, :this => 6916, :to => 29402, :with => 9201, :you => 22205})
 end
-
 end
